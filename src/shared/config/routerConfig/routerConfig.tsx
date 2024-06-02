@@ -1,4 +1,4 @@
-import AppRouter from "app/providers/router/ui/AppRouter";
+import React  from 'react';
 import {RouteProps} from "react-router-dom";
 import MainPage from "pages/MainPage/ui/MainPage";
 import {AboutPage} from "pages/AboutPage";

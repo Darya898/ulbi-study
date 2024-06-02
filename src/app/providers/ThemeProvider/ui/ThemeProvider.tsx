@@ -9,9 +9,7 @@ type Props = {
 };
 const ThemeProvider:FC<Props> = ({children}) => {
     const [theme, setTheme]=useState<Theme>(defaultTheme)
-    const toggleTheme=()=>{
-        setTheme(theme==Theme.DARK?Theme.LIGHT:Theme.DARK)
-    }
+
     const defaultProps=useMemo(()=>(
         {theme:theme,setTheme:setTheme}),[theme]);
     return (
