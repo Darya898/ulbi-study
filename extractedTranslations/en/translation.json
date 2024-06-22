@@ -1,5 +1,8 @@
 {
   "about": "about",
+  "get error": "get error",
   "language": "language",
-  "main": "main"
+  "main": "main",
+  "page not found": "page not found",
+  "page reload": "page reload"
 }

@@ -2,5 +2,8 @@
 
 "main": "main page",
 "translate": "translate",
-  "language": "en"
+ "language": "en",
+ "page not found": "Page not found",
+ "get error": "An unexpected error occurred",
+ "page reload": "Refresh the page"
 }

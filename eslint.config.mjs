@@ -11,8 +11,11 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReactConfig,
-  {rules:{
-  'no-unused-vars':'warn',
+  {"extends":["plugin:i18next/recommended"]},
+  {  "plugins":["i18next"],},
+  {
+    rules:{
+      'no-unused-vars':'warn',
       "no-undef": "warn"
 },
   globals:{
