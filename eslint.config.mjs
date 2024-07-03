@@ -2,24 +2,35 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
+import i18next from "i18next";
 
 
 
 
 export default [
-  {languageOptions: { globals: globals.browser }},
+
+  // {languageOptions: {  ecmaVersion: 6}},
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReactConfig,
-  {"extends":["plugin:i18next/recommended"]},
-  {  "plugins":["i18next"],},
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        '__IS_DEV__': "writable",
+        "__dirname": "writable"
+      },
+    },
+  },
+
+  {  plugins:{i18next},},
   {
     rules:{
       'no-unused-vars':'warn',
-      "no-undef": "warn"
+      "no-undef": "warn",
+      "@typescript-eslint/no-unused-vars":"warn",
+      "react/react-in-jsx-scope": "off"
 },
-  globals:{
-    '__IS_DEV__':true,
-  }
+
   }
 ];
